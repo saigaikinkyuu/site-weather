@@ -1248,9 +1248,8 @@ $("#close-popup").click(function() {
                               clone_element.querySelector('.kind').classList.add('text-purple');
                             } else if (json[i].kind.includes('警報')) {
                               clone_element.querySelector('.kind').classList.add('text-red');
-                            }
-                            if (json[i].kind === '熱中症警戒アラート') {
-                                clone_element.querySelector('.kind').classLinse.add('text-red');
+                            } else if (json[i].kind === '熱中症警戒アラート') {
+                              clone_element.querySelector('.kind').classList.add('text-red');
                             }
                   
                             base_element[0].parentNode.appendChild(clone_element);
