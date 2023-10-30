@@ -1055,38 +1055,6 @@ $("#close-popup").click(function() {
             </div>
         
     </header>
-    <div>
-      <script>
-        var api_url = 'https://script.google.com/macros/s/AKfycbwp1T6EyVyAEKMzjTgyVBVKiXFtor2vqv-ZiqvUVQC_-1qIYLmSznVLLTaYGDA3S1sP4w/exec';
-        
-        console.log('1');
-        fetch(api_url)
-          .then(function (fetch_data) {
-            return fetch_data.json();
-          })
-          .then(function (json) {
-            for (var i in json) {
-              console.log('2');
-              var I = document.getElementsByClassName("I")[0]; // 最初の要素を取得
-              var I2 = document.getElementsByClassName("I")[1]; // 最初の要素を取得
-              console.log(I);
-              if (json[i].situation === 'stop publish') {
-                // 何も行わない
-              } else if (json[i].situation === '') {
-                I.classList.add('not');
-                I2.classList.add('not');
-              } else {
-                window.location.href = 'https://kinkyuujyouhou-kishou.netlify.app/';
-              }
-              
-              const notElements = document.querySelectorAll('.not');
-              notElements.forEach(element => {
-                element.remove();
-              });
-            }
-          });
-      </script>
-    </div>
     <div class="container">
         <div class="item01">
             <main>
@@ -1243,7 +1211,6 @@ $("#close-popup").click(function() {
             <div class="item02">
             <aside>
                       <h2>日本国内の気象・地震・避難情報</h2>
-                      <h3 class="I" style="color: red;">※掲載停止中</h3>
                       <div class="photo_container">
                         <div class="item-thumbnail">
                             <div>
